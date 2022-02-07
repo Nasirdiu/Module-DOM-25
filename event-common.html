@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="click-method"></p>
+
+    <input id="name-field" type="text">
+    <button id="update-name">Update</button>
+
+    <button onclick="justFunction()">Just Function</button>
+    <button id="direct">direct add event listener</button>
+
+    <!-- java script link  -->
+    <script>
+        // using function 
+      function justFunction() {
+        const p = document.getElementById("click-method");
+        p.innerText = "Set by name Nasir 369";
+      }
+      //  direct
+      document.getElementById("direct").addEventListener("click", function () {
+        const p = document.getElementById("click-method");
+        p.innerText = "set your name";
+      });
+
+      // update name
+    document.getElementById('update-name').addEventListener('click',function(){
+        const field=document.getElementById('name-field');
+
+       const p = document.getElementById("click-method");
+        p.innerText = field.value;
+        field.value='';
+    })
+
+    </script>
+  </body>
+</html>

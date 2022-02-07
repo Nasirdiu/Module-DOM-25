@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Add your comment,please!</h2>
+    <section>
+      <h4>your comment</h4>
+      <div id="comment-Container">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel amet enim
+          iste possimus, adipisci aliquid at nisi vitae, similique asperiores
+          sed porro beatae alias ea? Obcaecati suscipit commodi illo. Tempore.
+        </p>
+        <p>
+          Nihil itaque quibusdam repellendus repudiandae dolores nostrum dolorum
+          provident hic neque! Ipsum qui facere, architecto rerum placeat saepe
+          asperiores et voluptatem odio quos accusamus iste aperiam atque
+          mollitia officia nesciunt.
+        </p>
+      </div>
+      <div>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea> <br />
+        <button id="post-button">Post</button>
+      </div>
+    </section>
+    <script>
+        //step 1
+      document.getElementById("post-button").addEventListener("click", function () {
+        //step 2 user comment
+          const comment = document.getElementById("new-comment");
+          const userComment = comment.value;
+
+          //step 3 creat praghrap
+          const newcomment=document.createElement('p');
+          newcomment.innerText=comment.value;
+
+          // step 4 append the comment
+          const commentContainner=document.getElementById('comment-Container');
+          commentContainner.appendChild(newcomment);
+
+          // clen the comment box
+          comment.value='';
+        });
+    </script>
+  </body>
+</html>
