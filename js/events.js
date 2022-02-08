@@ -37,10 +37,7 @@ hot.addEventListener('click',function makepink(){
 
 document.getElementById('light-button').addEventListener('click',function makelight(){
     document.body.style.backgroundColor='lightblue'
-})
-
-//event-common html use js
+}) 
 
 
-//direct-handel button
 
